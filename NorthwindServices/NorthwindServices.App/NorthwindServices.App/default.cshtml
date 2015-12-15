@@ -1,0 +1,24 @@
+﻿@using NorthwindServices.App.ServiceModel
+@using NorthwindServices.App.ServiceModel.Request
+@inherits ViewPage
+
+@{
+    ViewBag.Title = "ServiceStack with Razor";
+}
+
+<h2>Hello World Service</h2>
+
+<form action="@(new HelloRequest().ToPostUrl())">
+    <div>
+        <input class="form-control input-lg" name="Name" type="text" placeholder="Type your name">
+        <button>Submit</button>
+    </div>
+</form>
+
+<form action="@(new ProductsByCategoryNameRequest().ToPostUrl())">
+    <div>
+        <input class="form-control input-lg" name="Name" type="text" placeholder="Type your category name">
+        <button>Submit</button>
+    </div>
+</form>
+
